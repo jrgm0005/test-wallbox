@@ -8,12 +8,10 @@ use Wallbox\Models\Map as Map;
 use \Exception as Exception;
 class Car
 {
-
     const INVALID_MOVEMENTS = 'INVALID_MOVEMENTS';
-
+    const MOVE_FORWARD = 'M';
     const MOVE_LEFT = 'L';
     const MOVE_RIGHT = 'R';
-    const MOVE_FORWARD = 'M';
 
     const MOVEMENTS = [
         self::MOVE_FORWARD => 'forward',
@@ -43,7 +41,7 @@ class Car
         return true;
     }
 
-    public function run($map)
+    public function run(Map $map)
     {
         $movementArray = str_split($this->movements);
         foreach ($movementArray as $key => $movement) {
@@ -65,7 +63,7 @@ class Car
         $this->id = $id;
     }
 
-    public function getPosition()
+    public function getPosition():Position
     {
         return $this->position;
     }
@@ -75,7 +73,7 @@ class Car
         $this->position = $p;
     }
 
-    public function getMovements()
+    public function getMovements():string
     {
         return $this->movements;
     }

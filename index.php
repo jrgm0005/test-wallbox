@@ -30,8 +30,8 @@ try {
         if ($outputType == 'cli') {
             print $ev->getPosition()->toString() . PHP_EOL;
         } else {
-           print "<p>" . $ev->getPosition()->toString() . "</p>";
-       }
+            print "<p>" . $ev->getPosition()->toString() . "</p>";
+        }
     }
 } catch (\Throwable $e) {
     print $e->getMessage();

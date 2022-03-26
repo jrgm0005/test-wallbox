@@ -75,7 +75,7 @@ class FileParser implements IParser
 
     }
 
-    protected function getCarPosition($data)
+    protected function getCarPosition(string $data):Position
     {
         $input = explode(" ", $data);
 
@@ -87,7 +87,7 @@ class FileParser implements IParser
         return $position;
     }
 
-    protected function isInteger($input)
+    protected function isInteger($input):bool
     {
         return(ctype_digit(strval($input)));
     }

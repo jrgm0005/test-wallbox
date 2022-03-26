@@ -4,7 +4,6 @@ namespace Wallbox\Models;
 
 class Cardinal
 {
-
     const INVALID_CARDINAL = 'INVALID_CARDINAL';
 
     const NORTH = 'N';
@@ -44,5 +43,4 @@ class Cardinal
         }
         return new Cardinal(self::CARDINALS[--$this->current]);
     }
-
 }
